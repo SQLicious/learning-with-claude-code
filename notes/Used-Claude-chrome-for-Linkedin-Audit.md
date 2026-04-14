@@ -18,7 +18,7 @@
 - The difference between what a PDF export captures vs what the live profile shows is bigger than expected — metrics, ordering, and recently added items are often missing from exports
 
 ## Claude in Chrome Limitation as of 04-13-2026
-![Claude Limitation](images/Claude Chrome Linkedin limitation.png)
+![Claude Limitation](images/Claude%20Chrome%20Linkedin%20limitation.png)
 
 ## Next thing to try
 - Return with Claude in Chrome once the banner redesign is done and the Databricks Professional cert is added (target: May 2026) to do a final live audit and compare against today's baseline

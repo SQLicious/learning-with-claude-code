@@ -1,22 +1,24 @@
 # 2026-04-15
 
-> **Essence:** I set up Claude Code GitHub review for my Query Forge repo so Claude can assist inside PR and issue workflows, while I still keep control of my daily manual commits and pushes from VS Code.
+> **Essence:** Today I set up Claude Code review for my Query Forge repo and learned that the reviewer workflow has to be defined at the repo level unless I create a reusable workflow pattern at the account level and call it from each repo.
 
 ## What I learned
-1. Claude in GitHub is usually set up through a GitHub Action inside `.github/workflows`, not through automatic syncing from VS Code.
-2. Claude’s GitHub integration needs both a workflow file and an auth secret, such as `ANTHROPIC_API_KEY` or `CLAUDE_CODE_OAUTH_TOKEN`.
-3. When `claude` shows up as a contributor on a repo, it usually means Claude is participating through GitHub-side automation like PR reviews, issue responses, or code changes.
+1. Claude Code review is not just turned on once for my whole GitHub account. I have to add the reviewer workflow inside each repo where I want it to work.
+2. I can make this easier by creating a reusable workflow at the account level and then inheriting or calling that workflow from each repo.
+3. The Anthropic API key lives in Query Forge GitHub repo settings under Secrets, and I need to think more about how to manage that safely if I keep creating more repos.
 
 ## What I applied
-- Set up Claude Code GitHub review in the workflows for my Query Forge folder.
-- Clarified the difference between Claude helping locally in VS Code and Claude acting inside GitHub workflows.
-- Kept my intended workflow manual for end-of-day commits and pushes.
+- Added the Claude Code reviewer workflow to my Query Forge repo.
+- Saved the Anthropic key in the repo’s GitHub Secrets settings.
+- Started understanding the difference between repo-level setup and reusable workflow setup.
 
 ## What was confusing
-- I initially mixed up Claude as a local coding assistant with Claude as a GitHub workflow automation tool.
-- It was not obvious at first what it meant when `claude` appeared as a contributor on someone else’s repo.
+- I first assumed Claude Code review could be enabled once at the GitHub account level for every repo automatically.
+- I am still not clear on the best way to manage secrets securely across multiple repos.
 
 ## Next thing to try
-- Test `@claude` in a PR or issue to confirm the workflow triggers correctly.
+- Test a reusable workflow setup so I do not have to rewrite the same reviewer workflow in every repo.
+- Research the safest way to manage Anthropic secrets across multiple repos.
+- Trigger `@claude` in Query Forge and confirm the reviewer flow works end to end.
 - Review my `.github/workflows` file again so I understand the triggers, permissions, and auth setup clearly.
 - Build a simple end-of-day git habit for Query Forge: `git add .`, `git commit -m "end of day"`, and `git push`.

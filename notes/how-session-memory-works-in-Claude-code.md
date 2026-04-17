@@ -25,4 +25,3 @@
 
 - Pipe the next JD paste into `oferta` (score-only, no PDF) instead of auto-pipeline to save about `15K` tokens on borderline candidates, then only escalate to full auto-pipeline when score is `>= 4.0`.
 - Build a small script that greps `MEMORY.md` plus the memory directory to audit what Claude "knows" about me, and treat it like a dotfile I version in its own repo.
-- Try a project-type memory capturing my TN visa timeline (deadline, employer change constraints) so it surfaces in every evaluation automatically.
